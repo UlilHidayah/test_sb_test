@@ -1,0 +1,30 @@
+STEP RUNNING PROJECT
+1. create db mysql
+    CREATE DATABASE java_sb_test
+2. running
+    mvn spring-boot:run
+
+list api:
+1. http://localhost:8081/api/auth/signup (POST)
+    request body :
+    {
+        "name":"Ulil",
+        "username":"ulil08",
+        "email":"ulilhidayah1998@gmail.com",
+        "password":"ulil08"
+    }
+
+2. http://localhost:8081/api/auth/signin (POST)
+    request body :
+    {
+        "usernameOrEmail":"ulil08",
+        "password":"ulil08"
+    }
+
+3. http://localhost:8081/api/recruitment/getJobList (GET)
+    with Authorization Bearer Token from signin
+
+4. http://localhost:8081/api/recruitment/getJobDetail?id=32bf67e5-4971-47ce-985c-44b6b3860cdb (GET)
+    with Authorization Bearer Token from signin
+
+5. token expired in 3 minutes
